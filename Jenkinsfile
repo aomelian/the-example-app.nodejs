@@ -10,7 +10,7 @@ pipeline {
     }
 
     environment {
-        ECR_PASS = credentials('ecr_password')
+        // ECR_PASS = credentials('ecr_password')
         registryIp = ""
     }
 
