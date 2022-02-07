@@ -40,7 +40,7 @@ pipeline {
                 sh 'npm i'
             }
         }
-        stage ('compile') {
+        stage ('build') {
             steps {
                 sh "docker build -t ${branch}-${revision} ."
             }
