@@ -3,7 +3,11 @@ def revision
 def tagVar
 
 pipeline {
-    agent none
+    agent {
+        node {
+            label 'linux'
+        }
+    }
 
     options {
         skipDefaultCheckout true
