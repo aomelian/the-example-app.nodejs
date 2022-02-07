@@ -38,7 +38,7 @@ pipeline {
             agent { docker 'node:latest' }
             steps {
                 sh 'ls && pwd'
-                sh 'npm i'
+                sh 'HOME=. npm i'
             }
         }
         stage ('build') {
