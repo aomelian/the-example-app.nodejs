@@ -36,7 +36,7 @@ pipeline {
         stage ('compile') {
             agent { docker 'node:latest' }
             steps {
-                sh 'ls'
+                sh 'ls && pwd'
                 sh 'npm i'
             }
         }
