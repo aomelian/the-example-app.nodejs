@@ -33,10 +33,10 @@ pipeline {
             }
 
         }
+    }
         stage ('compile') {
-            agent { docker 'node:latest' }
             steps {
-                sh 'npm i'
+                sh "docker build -t ${branch}-${revision} ."
             }
         }
     }
